@@ -1,6 +1,3 @@
-CoreSW
-------
-
 conf t
 !
 hostname CoreSW

@@ -1,6 +1,6 @@
 conf t
 !
-hostname CoreSW
+hostname SW2
 !
 enable secret cisco
 !
