@@ -1,4 +1,4 @@
-Try the following tasks, and please do it so that you will be
+Try the following tasks, and please do it yourself, so that you will be
 good with the concepts.
 
 1) Create a loopback interface and assign an IP, then get the running config.
