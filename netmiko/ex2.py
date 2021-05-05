@@ -1,27 +1,27 @@
 # Exercise 2: Create Multiple VLANs on all switches using SSH
 from netmiko import ConnectHandler
-switch1 = {
+CoreSW = {
  'device_type': 'cisco_ios',
  'ip': '192.168.100.20',
  'username': 'admin',
  'password': 'cisco',
  'secret' : 'cisco',
 }
-switch2 = {
+SW1 = {
  'device_type': 'cisco_ios',
  'ip': '192.168.100.21',
  'username': 'admin',
  'password': 'cisco',
  'secret' : 'cisco',
 }
-switch3 = {
+SW2 = {
  'device_type': 'cisco_ios',
  'ip': '192.168.100.22',
  'username': 'admin',
  'password': 'cisco',
  'secret' : 'cisco',
 }
-switches = [switch1, switch2, switch3]
+switches = [CoreSW, SW1, SW2]
 for devices in switches:
  net_connect = ConnectHandler(**devices)
  net_connect.enable()
