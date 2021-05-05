@@ -1,0 +1,7 @@
+username admin1 pri 15 password cisco1
+ntp server 1.2.3.4
+int range gig 3/0 - 3
+ switchport access vlan 10
+ switchport mode access
+ no sh
+end
