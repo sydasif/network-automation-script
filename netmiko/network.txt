@@ -1,0 +1,7 @@
+no vlan 11
+no vlan 12
+no vlan 13
+no vlan 14
+no vlan 15
+exit
+write mem
