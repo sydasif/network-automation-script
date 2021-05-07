@@ -1,0 +1,16 @@
+enable
+conf t
+
+username admin password cisco
+username admin priv 15
+
+line vty 0 4
+ login local
+ transport input all
+
+ip domain-name cisco.com
+crypto key genrate rsa
+1024
+
+end
+wr
