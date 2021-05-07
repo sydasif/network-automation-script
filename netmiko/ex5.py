@@ -12,7 +12,7 @@ CoreSW = {
  'ip': '192.168.100.20',
  'username': 'admin',
  'password': password,
- 'secret' : secret,
+ 'secret' : secret
 }
 
 '''calling the ConnectHandler Library [**iosv_l2 means telling
