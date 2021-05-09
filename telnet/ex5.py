@@ -1,9 +1,9 @@
 # Exercise 5: Create multiple VLANs on multiple switches 
 
 ''' For this exercise, first we need to create a file containing the 
-IP addresses of all theswitches.Later in the program, we will call this file 
+IP addresses of all the switches.Later in the program, we will call this file 
 and the code will check IP one by one and perform the operation.
-Create a file named as switches.txt. Write all the four IP address of the
+Create a file named as switches.txt. Write all the three IP address of the
 switches in the test file, one by one. Then save and exit.'''
 
 import getpass
