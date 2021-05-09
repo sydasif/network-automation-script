@@ -11,11 +11,11 @@ enable_pass = 'cisco' #Privileged-exec mode password
 #There is a default sleep time of 1 second, but can always change it for something 
 #that may need to sit for a bit longer.
 def issue_command(channel, command, delay=1):
-    connect = channel
+    connection = channel
     command_str = command + "\n"
-    connect.send(command_str)
+    connection.send(command_str)
     time.sleep(delay)
-    output = connect.recv(99999)
+    output = connection.recv(99999)
     return output
 
 #Sets up the ssh session and log in as "admin" with password "cisco" to host '192.168.100.22' . 
@@ -23,18 +23,18 @@ def issue_command(channel, command, delay=1):
 try:
     ssh = paramiko.SSHClient()
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    ssh.connect(host, username=user, password=passw, look_for_keys=False, allow_agent=False)
-    connect = ssh.invoke_shell()
+    ssh.connection(host, username=user, password=passw, look_for_keys=False, allow_agent=False)
+    connection = ssh.invoke_shell()
 except:
     print ("Login to {} failed".format(host))
-    connect = False
+    connection = False
 
 
-if connect:
-    issue_command(connect, "enable")
-    issue_command(connect, enable_pass)
-    issue_command(connect, "terminal length 0")
-    output = issue_command(connect, "show vlan brief", 2)
+if connection:
+    issue_command(connection, "enable")
+    issue_command(connection, enable_pass)
+    issue_command(connection, "terminal length 0")
+    output = issue_command(connection, "show vlan brief", 2)
     ssh.close()
     print (output.decode())
 else:
