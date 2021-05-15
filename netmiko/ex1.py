@@ -1,7 +1,7 @@
 # Exercise 1: Create VLANs and Assign IP using SSH
 from netmiko import ConnectHandler
 
-#Creat a dictionary for a perticular device
+#Create a dictionary for a perticular device
 CoreSW = {
  'device_type': 'cisco_ios',
  'ip': '192.168.100.20',
