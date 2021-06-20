@@ -17,7 +17,7 @@ for IP in f:
     tn.write(b"cisco\n")
     tn.write(b"conf t\n")
     tn.write(b"ip domain-name cisco.com\n")
-    tn.write(b"crypto key generate rsa modulus 1024\n\n")
+    tn.write(b"crypto key generate rsa modulus 2048\n\n")
     tn.write(b"line vty 0 4\n")
     tn.write(b"transport input ssh telnet\n")
     tn.write(b"end\n")
