@@ -4,7 +4,7 @@ username admin password cisco
 username admin priv 15
 !
 ip domain-name cisco.com
-crypto key genrate rsa module 2048
+crypto key gen rsa mod 2048
 !
 line con 0
  exec-timeout 0 0
