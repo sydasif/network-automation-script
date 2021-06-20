@@ -4,21 +4,11 @@ hostname SW2
 !
 enable secret cisco
 !
-username admin password cisco
-!
 interface Vlan1
  ip address 192.168.100.22 255.255.255.0
  no shutdown
 !
 no ip domain-lookup
-!
-line con 0
- exec-timeout 0 0
-!
-line vty 0 4
- logging synchronous
- login local
- transport input all
 !
 end
 !

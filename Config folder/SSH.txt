@@ -1,16 +1,19 @@
-enable
 conf t
-
+!
 username admin password cisco
 username admin priv 15
-
+!
+ip domain-name cisco.com
+crypto key genrate rsa module 2048
+!
+line con 0
+ exec-timeout 0 0
+!
 line vty 0 4
+ logging synchronous
  login local
  transport input all
-
-ip domain-name cisco.com
-crypto key genrate rsa
-1024
-
+!
 end
+!
 wr
