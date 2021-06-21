@@ -31,12 +31,7 @@ Lab simulation software  | GNS3
 Switches | Cisco L2 virtual
 Network Automation PC | Docker in GNS3
 
-### Important Links: 
-> 1. [Download GNS3](https://gns3.com/software)
-> 2. [To install Cisco IOSv on GNS3, refer to GNS3 documentation](https://docs.gns3.com/appliances/cisco-iosvl2.html)
-> 3. [Download the IOS images from Cisco Software downloads](https://software.cisco.com/download/)
-
-## Topology
+### Topology
 In this lab topology, I have used the following components in GNS3.
 1. A Network Automation Appliance. We will be coding python in this PC.
 2. A Layer2 Ethernet Switch.
