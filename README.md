@@ -7,23 +7,23 @@ Network automation is the process of automating the configuration, management an
 
 Scripting languages are widely used by Network and System administrators for automating the tasks. This saves time, effort and thereby reducing human errors as well. Among the automation tools, Python and Ansible are the most popular ones. With Software Defined Networking (SDN) in picture, knowing any of these programming languages is vital for the future of administering the network and systems. See [How to Install Python 3?](https://www.python.org/downloads/)
 
-### *Python for Networking*
+## Python for Networking
 
-### *Ebooks*
+### Ebooks
 
-**Natasha Samoilenko** [Python for Network Engineer](https://pyneng.readthedocs.io/en/latest/)
+**Natasha Samoilenko** [*Python for Network Engineer*](https://pyneng.readthedocs.io/en/latest/)
 
-**Lisa Tagliaferri** [How to Code in Python](https://www.digitalocean.com/community/books/digitalocean-ebook-how-to-code-in-python)
+**Lisa Tagliaferri** [*How to Code in Python*](https://www.digitalocean.com/community/books/digitalocean-ebook-how-to-code-in-python)
 
-### *Videos*
+### Videos
 
-**Kirk Byers** [Vimeo](https://vimeo.com/user31890934)
+**Kirk Byers** [*Vimeo*](https://vimeo.com/user31890934)
 
-**David Bombal** [YouTube](https://www.youtube.com/watch?v=-1Z6ygHO--8&list=PLhfrWIlLOoKPn7T9FtvbOWX8GxgsFFNwn)
+**David Bombal** [*YouTube*](https://www.youtube.com/watch?v=-1Z6ygHO--8&list=PLhfrWIlLOoKPn7T9FtvbOWX8GxgsFFNwn)
 
-## Setting up the Lab
+### Setting up the Lab
 
-### Software’s and images used
+#### Software’s and images used
 
 Item                     | Software
 ------------------------ | --------
@@ -31,7 +31,7 @@ Lab simulation software  | GNS3
 Switches | Cisco L2 virtual
 Network Automation PC | Docker in GNS3
 
-### Topology
+#### Topology
 In this lab topology, I have used the following components in GNS3.
 1. A Network Automation Appliance. We will be coding python in this PC.
 2. A Layer2 Ethernet Switch.
@@ -39,7 +39,3 @@ In this lab topology, I have used the following components in GNS3.
 4. Three Cisco Virtual IOS switches.
 5. [Device Configuration](https://github.com/sydasif/network-automation/tree/master/configuration)
 ![lab diagram](https://github.com/sydasif/network-automation/blob/master/topology.png)
-
-
-
-                   
