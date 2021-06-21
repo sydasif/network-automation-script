@@ -5,11 +5,18 @@ hostname SW2
 enable secret cisco
 service password-encryption
 !
+username admin password cisco
+!
+no ip domain-lookup       
+!
 interface Vlan1
  ip address 192.168.100.22 255.255.255.0
  no shutdown
 !
-no ip domain-lookup
+line vty 0 4
+ logging synchronous
+ login local
+ transport input all
 !
 end
 !
