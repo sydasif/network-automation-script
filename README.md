@@ -32,8 +32,14 @@ Switches | Cisco L2 virtual
 Network Automation PC | Docker in GNS3
 
 ### Important Links: 
-1. [Download GNS3](https://gns3.com/software)
-2. [To install Cisco IOSv on GNS3, refer to GNS3 documentation](https://docs.gns3.com/appliances/cisco-iosvl2.html)
-3. [Download the IOS images from Cisco Software downloads](https://software.cisco.com/download/)
+> 1. [Download GNS3](https://gns3.com/software)
+> 2. [To install Cisco IOSv on GNS3, refer to GNS3 documentation](https://docs.gns3.com/appliances/cisco-iosvl2.html)
+> 3. [Download the IOS images from Cisco Software downloads](https://software.cisco.com/download/)
+
+## Topology
+In this lab topology, I have used the following components in GNS3.
+1. A Network Automation Appliance named as NetworkAutomation-PC. We will be coding python in this PC.
+2. A Layer2 Ethernet Switch named as AccessSW.
+3. A NAT cloud named as NAT-1. This is used to provide internet connectivity to the NetworkAutomation-PC. NAT-1 also acts as a DHCP server.
 
                    
