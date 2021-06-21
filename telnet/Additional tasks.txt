@@ -1,6 +1,0 @@
-Try the following tasks, and please do it yourself, so that you will be
-good with the concepts.
-
-1) Create a loopback interface and assign an IP, then get the running config.
-2) Create a new user.
-3) Delete the previously created VLAN 20.
