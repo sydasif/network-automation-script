@@ -38,8 +38,13 @@ Network Automation PC | Docker in GNS3
 
 ## Topology
 In this lab topology, I have used the following components in GNS3.
-1. A Network Automation Appliance named as NetworkAutomation-PC. We will be coding python in this PC.
-2. A Layer2 Ethernet Switch named as AccessSW.
-3. A NAT cloud named as NAT-1. This is used to provide internet connectivity to the NetworkAutomation-PC. NAT-1 also acts as a DHCP server.
+1. A Network Automation Appliance. We will be coding python in this PC.
+2. A Layer2 Ethernet Switch.
+3. A NAT cloud, this is used to provide internet connectivity and also acts as a DHCP server.
+4. Three Cisco Virtual IOS switches.
+5. [Device Configuration](https://github.com/sydasif/network-automation/tree/master/configuration)
+![lab diagram](https://github.com/sydasif/network-automation/blob/master/topology.png)
+
+
 
                    
