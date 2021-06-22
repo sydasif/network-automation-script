@@ -47,9 +47,9 @@ In this lab we will use following python module:
 #### [telnetlib](https://docs.python.org/3/library/telnetlib.html) — Telnet client
 
 The python telnetlib module provides a Telnet class that implements the Telnet protocol.
-This process has been completely tested and verified on 20 Jun, 2021 using GNS3.
+This telnetlib (scripts) in *[my repo](https://github.com/sydasif/network-automation/tree/master/telnet)* has been completely tested and verified on 20 Jun, 2021 using GNS3.
 
 #### [Pexpect](https://pexpect.readthedocs.io/en/stable/index.html)
 
 Pexpect can be used for automating interactive applications such as ssh, ftp, passwd, telnet, etc.
-This process has been completely tested and verified on 22 Jun, 2021 using GNS3.
+This pexpect (script) in *[my repo](https://github.com/sydasif/network-automation/tree/master/pexpect)* has been completely tested and verified on 22 Jun, 2021 using GNS3.
