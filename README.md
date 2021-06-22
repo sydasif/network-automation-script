@@ -53,3 +53,9 @@ This telnetlib (scripts) in *[my repo](https://github.com/sydasif/network-automa
 
 Pexpect can be used for automating interactive applications such as ssh, ftp, passwd, telnet, etc.
 This pexpect (script) in *[my repo](https://github.com/sydasif/network-automation/tree/master/pexpect)* has been completely tested and verified on 22 Jun, 2021 using GNS3.
+
+#### [paramiko](http://www.paramiko.org/)
+
+Paramiko is a Python (2.7, 3.4+) implementation of the SSHv2 protocol, providing both client and server functionality.
+Paramiko itself is a pure Python interface around SSH networking concepts.
+This Paramiko(scripts) in *[my repo](https://github.com/sydasif/network-automation/tree/master/paramiko)* has been completely tested and verified on 22 Jun, 2021 using GNS3.
