@@ -23,7 +23,7 @@ def issue_command(channel, command, delay=1):
 try:
     ssh = paramiko.SSHClient()
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    ssh.connection(host, username=user, password=passw, look_for_keys=False, allow_agent=False)
+    ssh.connect(hostname=host, username=user, password=passw, look_for_keys=False, allow_agent=False)
     connection = ssh.invoke_shell()
 except:
     print ("Login to {} failed".format(host))
