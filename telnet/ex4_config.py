@@ -34,4 +34,3 @@ tn.write(b"write memory\n")
 tn.write(b"exit\n")
 
 print(tn.read_all().decode('ascii'))
-

@@ -28,5 +28,5 @@ for IP in f:
     config.write(output.decode("ascii"))
     config.write("\n")
     #close the files opened
-    config.close
+    config.close()
     print(tn.read_all().decode("ascii"))
