@@ -21,6 +21,8 @@ Scripting languages are widely used by Network and System administrators for aut
 
 **David Bombal** [*YouTube*](https://www.youtube.com/watch?v=-1Z6ygHO--8&list=PLhfrWIlLOoKPn7T9FtvbOWX8GxgsFFNwn)
 
+**Python for Network Engineer** [*YouTube*](https://www.youtube.com/watch?v=sG_RiytUA38&list=PLOocymQm7YWakdZkBfCRIC06fv7xQE85N&t=0s)
+
 ### Setting up the Lab
 
 #### Software’s and images used
