@@ -21,7 +21,7 @@ for sw in list:
     cmd = open ('config_file')
     for lines in cmd:
         time.sleep(2)
-        DEVICE_ACCESS.send(str(line))
+        DEVICE_ACCESS.send(str(lines))
     
     time.sleep(3)
     output = DEVICE_ACCESS.recv(65000)
