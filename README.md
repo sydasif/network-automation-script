@@ -1,4 +1,5 @@
 # Network Automation
+
 --------------------
 
 What is Network Automation?
@@ -36,6 +37,7 @@ Network Automation PC | Docker in GNS3
 #### Topology
 
 In this lab topology, I have used the following components in GNS3.
+
 1. A Network Automation Appliance. We will be coding python in this PC.
 2. A Layer2 Ethernet Switch.
 3. A NAT cloud, this is used to provide internet connectivity and also acts as a DHCP server.
@@ -64,5 +66,5 @@ This Paramiko(scripts) in *[my repo](https://github.com/sydasif/network-automati
 
 #### [Netmiko](https://github.com/ktbyers/netmiko)
 
-developed by Kirk Byers is an open-source multivendor library that is used for SSH connections to network devices. Multi-vendor library means, Netmiko supports network devices from different vendors such as
+developed by Kirk Byers is an open-source multi vendor library that is used for SSH connections to network devices. Multi-vendor library means, Netmiko supports network devices from different vendors such as
 Cisco, Juniper , HP etc.
