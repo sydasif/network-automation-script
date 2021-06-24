@@ -1,3 +1,4 @@
+# Useing for loop to configure device 
 import paramiko
 import time
 
