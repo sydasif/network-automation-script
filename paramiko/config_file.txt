@@ -1,0 +1,6 @@
+conf t
+int lo0
+ip add 10.1.1.1 255.255.255.255
+exit
+end
+sh ip int bri
