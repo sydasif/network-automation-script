@@ -8,7 +8,7 @@ Network automation is the process of automating the configuration, management an
 
 Scripting languages are widely used by Network and System administrators for automating the tasks. This saves time, effort and thereby reducing human errors as well. Among the automation tools, Python and Ansible are the most popular ones. With Software Defined Networking (SDN) in picture, knowing any of these programming languages is vital for the future of administering the network and systems. See [How to Install Python 3?](https://www.python.org/downloads/)
 
-## Python for Networking
+## Python for Network Engineer
 
 ### Ebooks
 
@@ -62,9 +62,9 @@ This pexpect (scripts) in *[my repo](https://github.com/sydasif/network-automati
 
 Paramiko is a Python (2.7, 3.4+) implementation of the SSHv2 protocol, providing both client and server functionality.
 Paramiko itself is a pure Python interface around SSH networking concepts.
-This Paramiko(scripts) in *[my repo](https://github.com/sydasif/network-automation/tree/master/paramiko)* has been completely tested and verified on 22 Jun, 2021 using GNS3.
+This Paramiko(scripts) in *[my repo](https://github.com/sydasif/network-automation/tree/master/paramiko)* has been completely tested and verified on 24 Jun, 2021 using GNS3.
 
-#### [Netmiko](https://github.com/ktbyers/netmiko)
+#### [Netmiko](https://pypi.org/project/netmiko/)
 
 developed by Kirk Byers is an open-source multi vendor library that is used for SSH connections to network devices. Multi-vendor library means, Netmiko supports network devices from different vendors such as
 Cisco, Juniper , HP etc.
