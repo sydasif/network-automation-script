@@ -16,13 +16,15 @@ Scripting languages are widely used by Network and System administrators for aut
 
 **Lisa Tagliaferri** [*How to Code in Python*](https://www.digitalocean.com/community/books/digitalocean-ebook-how-to-code-in-python)
 
-### Videos
+### Links
 
-**Kirk Byers** [*Vimeo*](https://vimeo.com/user31890934)
+**Kirk Byers** [*Python for Network Engineers*](https://pynet.twb-tech.com/)
 
 **David Bombal** [*YouTube*](https://www.youtube.com/watch?v=-1Z6ygHO--8&list=PLhfrWIlLOoKPn7T9FtvbOWX8GxgsFFNwn)
 
 **Python for Network Engineer** [*YouTube*](https://www.youtube.com/watch?v=sG_RiytUA38&list=PLOocymQm7YWakdZkBfCRIC06fv7xQE85N&t=0s)
+
+**Network Automation Made Easy** [...with Sneaky Snakes—network automation for Windows OS, entirely free of cost](https://sneakysnakesautomation.com/)
 
 ### Setting up the Lab
 
