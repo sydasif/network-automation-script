@@ -13,13 +13,10 @@ CoreSW = {
 
 net_connect = ConnectHandler(**CoreSW)
 
-#Execute configuration change commands (will automatically enter into config mode)
+#Execute configuration change commands 
+#(will automatically enter into config mode)
 config_commands = [ 'int lo0',
                     'ip add 1.1.1.1 255.255.255.255',
                     'no shut' ]
 output = net_connect.send_config_set(config_commands)
-print(output)
-
-#Execute show commands
-output = net_connect.send_command('show ip int brief')
 print(output)
