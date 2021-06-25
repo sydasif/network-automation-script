@@ -64,7 +64,7 @@ Paramiko is a Python (2.7, 3.4+) implementation of the SSHv2 protocol, providing
 Paramiko itself is a pure Python interface around SSH networking concepts.
 This Paramiko(scripts) in *[my repo](https://github.com/sydasif/network-automation/tree/master/paramiko)* has been completely tested and verified on 24 Jun, 2021 using GNS3.
 
-#### [Netmiko](https://github.com/ktbyers/netmiko)
+#### [Netmiko](https://pypi.org/project/netmiko/)
 
 developed by Kirk Byers is an open-source multi vendor library that is used for SSH connections to network devices. Multi-vendor library means, Netmiko supports network devices from different vendors such as
 Cisco, Juniper , HP etc.
