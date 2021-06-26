@@ -45,6 +45,7 @@ In this lab topology, I have used the following components in GNS3.
 3. A NAT cloud, this is used to provide internet connectivity and also acts as a DHCP server.
 4. Three Cisco Virtual IOS switches.
 5. [Device Configuration](https://github.com/sydasif/network-automation/tree/master/configuration)
+6. [Ubuntu Server Configuration](https://github.com/sydasif/linux-lab)
 
 ![lab diagram](https://github.com/sydasif/network-automation/blob/master/topology.png)
 
