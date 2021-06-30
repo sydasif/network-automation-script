@@ -7,9 +7,9 @@ remote device as the command.
 import pexpect
 
 child = pexpect.spawn('telnet 192.168.100.20')
-child.expect('Username: ') # child.expect('[Uu]sername: ') 
+child.expect('Username: ')  # child.expect('[Uu]sername: ')
 child.sendline('admin')
-child.expect('Password: ') # child.expect(['Password', 'password'])
+child.expect('Password: ')  # child.expect(['Password', 'password'])
 child.sendline('cisco')
 child.expect('CoreSW>')
 child.sendline('enable')
