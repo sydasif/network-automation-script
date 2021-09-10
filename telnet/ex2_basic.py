@@ -1,4 +1,4 @@
-# Telnet Example
+# A simple example illustrating typical use.
 
 import getpass
 import telnetlib
