@@ -1,9 +1,9 @@
-# A simple example illustrating typical use.
+# Exercise: 01 A simple example illustrating typical use.
 
 import getpass
 import telnetlib
 
-HOST = "192.168.100.20"
+HOST = "192.168.138.10"
 user = input("Enter your Username: ")
 password = getpass.getpass()
 
