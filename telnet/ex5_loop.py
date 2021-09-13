@@ -1,8 +1,8 @@
 # Exercise 4: Create multiple VLANs using python for loop
 import getpass
 import telnetlib
-IP = input("Enter the IP Address :")
-user = input("Enter your username :")
+IP = input("Enter IP Address: ")
+user = input("Enter your username: ")
 password = getpass.getpass()
 tn = telnetlib.Telnet(IP)
 tn.read_until(b"Username: ")
