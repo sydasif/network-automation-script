@@ -62,3 +62,6 @@ This Paramiko(scripts) in *[my repo](https://github.com/sydasif/network-automati
 
 developed by Kirk Byers is an open-source multi vendor library that is used for SSH connections to network devices. Multi-vendor library means, Netmiko supports network devices from different vendors such as
 Cisco, Juniper , HP etc.
+
+#### [Python Exercise](python_exe)
+
