@@ -1,6 +1,17 @@
-### ==============================================================
-# Controlling the flow of a Python program
-### ==============================================================
+### ==========================================================================================
+                  ### Controlling the flow of a Python program ###
+### ==========================================================================================
+"""
+The following list shows you all comparison operators, that are available to you:
+    
+•  a == b       is equal to the value of b 
+•  a != b       is not equal to the value of b 
+•  a > b        is strictly greater than the value of b 
+•  a < b        is strictly less than the value of b 
+•  a >= b       is greater than or equal to the value of b 
+•  a <= b       is less than or equal to the value of b
+"""
+### =============================================================================================
 
 # First, define the two network parts
 lan = "10.2.10."
