@@ -1,10 +1,10 @@
 # variable called my_hostname and assign it a value(string)
 my_hostname = "router01"
 
-# useing single quotes to assign a string
+# using single quotes to assign a string
 my_domain = 'example.com'
 
-# use tripple quotes to define a string with multiple lines
+# use trippe quotes to define a string with multiple lines
 my_motd = """
 This is banner that will contain linebreaks and could be
 the motd of a router
@@ -22,12 +22,12 @@ my_throughput = 1.75
 print(my_port)
 print(my_throughput)
 
-# True & False in python are represented truth valuse(boolean)
+# True & False in python are represented truth values(boolean)
 knows_python = True
 knows_python = False
 print(knows_python)
 
-# define a variableto create an empty list 
+# define a variable's create an empty list 
 l = [] 
 
 # add variables to the end of this list using append() function
@@ -45,6 +45,3 @@ print("The domain stored in the list is: ")
 print(l[1])
 print("The port stored in the list is: ")
 print(l[2])
-
-
-
