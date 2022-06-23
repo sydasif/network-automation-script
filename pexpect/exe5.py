@@ -3,13 +3,15 @@
 import getpass
 from pexpect import pxssh
 
-devices = {'CoreSW': {'prompt': 'CoreSW#', 'ip': '192.168.100.20'}, 
-           'SW1': {'prompt': 'SW1#', 'ip': '192.168.100.21'}}
-commands = ['term length 0', 'show version', 'show run']
+devices = {'S1': {'prompt': 'S1#', 'ip': '192.168.10.10'}, 
+           'R1': {'prompt': 'R1#', 'ip': '192.168.10.11'}}
+
+commands = ['term length 0', 'show run']
 
 username = input('Username: ')
 password = getpass.getpass('Password: ')
 
+print("Backup Device Config.....")
 # Starts the loop for devices
 for device in devices.keys(): 
     outputFileName = device + '_output.txt'
@@ -26,3 +28,4 @@ for device in devices.keys():
             f.write(child.before)
     
     child.logout()
+print("Backup Done")
