@@ -11,15 +11,14 @@ commands = ['term length 0', 'show run']
 username = input('Username: ')
 password = getpass.getpass('Password: ')
 
-print("Backup Device Config.....")
 # Starts the loop for devices
 for device in devices.keys(): 
-    outputFileName = device + '_output.txt'
+    outputFileName = device + '_output.cfg'
     device_prompt = devices[device]['prompt']
 
     child = pxssh.pxssh()
     child.login(devices[device]['ip'], username.strip(), password.strip(), auto_prompt_reset=False)
-    
+    print("Backup Device Config....." + device)    
     # Starts the loop for commands and write to output
     with open(outputFileName, 'wb') as f:
         for command in commands:
@@ -28,4 +27,4 @@ for device in devices.keys():
             f.write(child.before)
     
     child.logout()
-print("Backup Done")
+print("Done")
