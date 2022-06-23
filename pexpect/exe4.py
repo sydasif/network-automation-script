@@ -19,5 +19,8 @@ for device in devices.keys():
     child.expect(device_prompt)
     child.sendline('show version | i V')
     child.expect(device_prompt)
-    print(child.before)
+    # convert it to a string
+    show_output = child.before.decode('utf-8')
+    # print out the command 
+    print(show_output) 
     child.sendline('exit')
