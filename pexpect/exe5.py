@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# for SSH create user with privilage level 15 
+# for SSH create user with privilege level 15 
 import getpass
 from pexpect import pxssh
 
