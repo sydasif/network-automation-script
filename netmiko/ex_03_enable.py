@@ -6,15 +6,15 @@ from getpass import getpass
 password = getpass()
 secret = getpass("Enter secret: ")
 
-R2 = {
+R1 = {
     "device_type": "cisco_ios",
-    "host": "192.168.80.9",
+    "host": "192.168.10.11",
     "username": "admin",
-    #"password": "cisco",
-    #"secret": "secret",
+    "password": password,
+    "secret": secret,
 }
 
-net_connect = ConnectHandler(**R2)
+net_connect = ConnectHandler(**R1)
 
 # Call 'enable()' method to elevate privileges
 
