@@ -1,17 +1,16 @@
-# Basic config_commands sample
+# Config_commands sample
 from netmiko import ConnectHandler
-from getpass import getpass
 
-password = getpass()
-
-CoreSW = {
-    'ip':   '192.168.100.20',
+R1 = {
+    'ip':   '192.168.10.11',
     'username': 'admin',
     'password': 'cisco',
+    'secret' : 'cisco',
     'device_type': 'cisco_ios',
 }
 
-net_connect = ConnectHandler(**CoreSW)
+net_connect = ConnectHandler(**R1)
+net_connect.enable()  # device enable mode
 
 #Execute configuration change commands 
 #(will automatically enter into config mode)
