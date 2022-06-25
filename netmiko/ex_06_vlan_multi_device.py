@@ -21,10 +21,13 @@ SW2 = {
  'password': 'cisco',
  'secret' : 'cisco'
 }
+
 switches = [CoreSW, SW1, SW2]
-for devices in switches:
-   net_connect = ConnectHandler(**devices)
+
+for device in switches:
+   net_connect = ConnectHandler(**device)
    net_connect.enable()
+   
    for n in range (10, 15):
       print("Creating VLAN " + str(n))
       config_commands = ['vlan ' + str(n), 'name DevOps_VLAN ' + str(n)]

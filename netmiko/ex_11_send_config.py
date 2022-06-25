@@ -1,16 +1,21 @@
 # Exercise 1: Create VLANs and Assign IP using SSH
 from netmiko import ConnectHandler
+from getpass import getpass
 
-#Create a dictionary for a perticular device
+# user input
+password = getpass()
+secret = getpass("Enter secret: ")
+
+#Create a dictionary for a particular device
 CoreSW = {
  'device_type': 'cisco_ios',
  'ip': '192.168.100.20',
  'username': 'admin',
- 'password': 'cisco',
- 'secret' : 'cisco',
+ 'password': password,
+ 'secret' : secret
 }
 
-'''calling the ConnectHandler Library [**iosv_l2 means telling
+'''calling the ConnectHandler Library [**iosv_l2] means telling
 python to consider the contents of the dictionary as key value pairs
 instead of single elements.'''
 
@@ -25,8 +30,3 @@ print(output)
 config_commands = ['int vlan 5', 'ip add 5.5.5.1 255.255.255.0']
 output = net_connect.send_config_set(config_commands)
 print(output)
-for n in range (10, 20):
-    print("Creating VLAN " + str(n))
-    config_commands = ['vlan ' + str(n), 'name DevOps_VLAN ' + str(n)]
-    output = net_connect.send_config_set(config_commands)
-    print(output)
