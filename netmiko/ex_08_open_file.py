@@ -24,7 +24,7 @@ SW2 = {
 devices = [CoreSW, SW1, SW2]
 
 #Open the config_change.txt file that has all the commands that we need to execute and read lines
-with open('config_file.txt') as f:
+with open('config_file1.cfg') as f:
     lines = f.read().splitlines()
 print(lines)
 
