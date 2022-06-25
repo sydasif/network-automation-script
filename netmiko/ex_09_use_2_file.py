@@ -23,7 +23,7 @@ SW2 = {
 }
 switches = [CoreSW, SW1, SW2]
 
-with open('network.txt') as f:
+with open('network.cfg') as f:
     lines = f.read().splitlines()
 print(lines)
 
@@ -33,7 +33,7 @@ for devices in switches:
     output = net_connect.send_config_set(lines)
     print(output)
 
-with open('SW2.txt') as f:
+with open('SW2.cfg') as f:
     lines = f.read().splitlines()
 print(lines)
 
