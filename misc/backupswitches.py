@@ -1,4 +1,4 @@
-#!/usr/bin/env pytho
+#!/usr/bin/env python
 from netmiko import Netmiko
 from datetime import datetime
 
@@ -46,16 +46,16 @@ Switch5 = {
     "device_type": "cisco_ios",
 }
 
-myswitches = [Switch1, Switch2, Switch3, Switch4, Switch5]
+switches = [Switch1, Switch2, Switch3, Switch4, Switch5]
 
-for x in myswitches:
-    net_connect = Netmiko(**x)
-    showver = net_connect.send_command("show version", use_textfsm=True)
-    showrun = net_connect.send_command("show run")
+for sw in switches:
+    net_connect = Netmiko(**sw)
+    show_version = net_connect.send_command("show version", use_textfsm=True)
+    show_run = net_connect.send_command("show run")
     hostname = showver[0]['hostname']
-    backupfilename = hostname + "_" + dt_string + ".txt"
-    file = open(backupfilename, "w")
-    file.write(showrun)
+    backup_file = hostname + "_" + dt_string + ".txt"
+    file = open(backup_file, "w")
+    file.write(show_run)
     file.close()
     print(hostname + " has been backed up" + "\n")
     net_connect.disconnect()
