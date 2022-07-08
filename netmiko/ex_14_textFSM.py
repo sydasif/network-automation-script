@@ -14,9 +14,9 @@ for IP in IP_LIST:
     net_connect = ConnectHandler(**device)
 
     print ('Initiating Running Backup\n')
-    showver = net_connect.send_command("show version", use_textfsm=True)
+    show_version = net_connect.send_command("show version", use_textfsm=True)
     output = net_connect.send_command("show run", delay_factor =False)
-    hostname = showver[0]['hostname']
+    hostname = show_version[0]['hostname']
     filename = hostname
     save_backup = open (filename, "w")
     save_backup.write(output)
