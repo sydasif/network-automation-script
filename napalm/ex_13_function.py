@@ -1,12 +1,16 @@
 from napalm import get_network_driver
 from termcolor import colored
 from getpass import getpass
+from dotenv import load_dotenv
+import os
 
 # Add different vendor list here 
 cisco = ['192.168.10.10', '192.168.10.11']
 
-username = input("Please Enter Your Username: ")
-password = getpass("Please Enter Your Password: ")
+load_dotenv()
+
+username = os.getenv("USER_ID")
+password = os.getenv("PASSWORD")
 
 def connect(ip, os_ver):
     for ip in cisco:
