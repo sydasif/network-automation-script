@@ -30,3 +30,5 @@ def connect(ip, os_ver):
 
 # calling function
 connect(cisco, "ios")
+
+# See details about python-dotenv: https://sydasif.github.io/python/python-dot-env/
