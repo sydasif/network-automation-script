@@ -1,0 +1,9 @@
+---
+SW1:
+  hostname: 192.168.10.10
+  groups:
+    - switch
+R1:
+  hostname: 192.168.10.11
+  groups:
+    - router
