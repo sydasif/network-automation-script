@@ -1,0 +1,42 @@
+import paramiko
+import time
+from getpass import getpass
+
+# Define connection details
+ip_address = "192.168.100.20"
+username = "admin"
+password = getpass('Enter SSH password: ')
+
+# Create an instance of the SSHClient class from Paramiko
+ssh_client = paramiko.SSHClient()
+# Set the policy to automatically add the host key
+ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+# Establish an SSH connection to the target device
+ssh_client.connect(hostname=ip_address, username=username, password=password)
+
+print("Successful connection to", ip_address)
+# Invoke an interactive shell session on the remote device
+remote_connection = ssh_client.invoke_shell()
+
+# Enter configuration mode
+remote_connection.send("configure terminal\n")
+
+# Loop to create VLANs 2 through 20
+for n in range(2, 21):
+    print("Creating VLAN " + str(n))
+    remote_connection.send("vlan " + str(n) + "\n")
+    remote_connection.send("name Python_VLAN_" + str(n) + "\n")
+    time.sleep(1)  # Ensure the device processes each command
+
+# Exit configuration mode
+remote_connection.send("end\n")
+
+# Wait for the commands to be processed
+time.sleep(3)
+# Retrieve the output from the buffer
+output = remote_connection.recv(65535)
+# Print the received output after decoding it
+print(output.decode())
+
+# Close the SSH connection
+ssh_client.close()
