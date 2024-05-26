@@ -26,7 +26,7 @@ This telnetlib (scripts) in *[my repo](telnet)* has been completely tested and v
 Pexpect can be used for automating interactive applications such as ssh, ftp, passwd, telnet, etc.
 This pexpect (scripts) in *[my repo](pexpect)* has been completely tested and verified on 22 Jun, 2021 using GNS3.
 
-### [paramiko](/paramiko/paramiko_doc.md)
+### [Paramiko](/paramiko/paramiko_doc.md)
 
 ### [Netmiko](https://pypi.org/project/netmiko/)
 
