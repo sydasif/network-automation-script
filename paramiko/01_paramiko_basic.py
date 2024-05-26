@@ -3,7 +3,7 @@ import time
 from getpass import getpass
 
 # Define the target device IP address
-ip_addr = '192.168.100.20'
+ip_addr = '172.16.10.11'
 # Define the username for SSH login
 username = 'admin'
 # Securely get the password from the user
@@ -31,7 +31,7 @@ device.send(b'term length 0\n')
 device.send(b'show run\n')
 
 # Wait for the command to complete
-time.sleep(5)
+time.sleep(10)
 # Receive the output from the device
 output = device.recv(65000)
 # Print the received output after decoding it to ASCII
