@@ -26,11 +26,10 @@ This telnetlib (scripts) in *[my repo](telnet)* has been completely tested and v
 Pexpect can be used for automating interactive applications such as ssh, ftp, passwd, telnet, etc.
 This pexpect (scripts) in *[my repo](pexpect)* has been completely tested and verified on 22 Jun, 2021 using GNS3.
 
-### [paramiko](http://www.paramiko.org/)
+### [paramiko](/paramiko/paramiko_doc.md)
 
 Paramiko is a Python (2.7, 3.4+) implementation of the SSHv2 protocol, providing both client and server functionality.
 Paramiko itself is a pure Python interface around SSH networking concepts.
-This Paramiko(scripts) in *[my repo](paramiko)* has been completely tested and verified on 24 Jun, 2021 using GNS3.
 
 ### [Netmiko](https://pypi.org/project/netmiko/)
 
