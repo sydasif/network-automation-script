@@ -28,9 +28,6 @@ This pexpect (scripts) in *[my repo](pexpect)* has been completely tested and ve
 
 ### [paramiko](/paramiko/paramiko_doc.md)
 
-Paramiko is a Python (2.7, 3.4+) implementation of the SSHv2 protocol, providing both client and server functionality.
-Paramiko itself is a pure Python interface around SSH networking concepts.
-
 ### [Netmiko](https://pypi.org/project/netmiko/)
 
 developed by Kirk Byers is an open-source multi vendor library that is used for SSH connections to network devices. Multi-vendor library means, Netmiko supports network devices from different vendors such as Cisco, Juniper , HP etc.
