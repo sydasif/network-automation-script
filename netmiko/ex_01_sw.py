@@ -3,11 +3,11 @@ from netmiko import ConnectHandler
 
 # Create a dictionary for a particular device
 S1 = {
- 'device_type': 'cisco_ios',
- 'ip': '192.168.10.10',
- 'username': 'admin',
- 'password': 'cisco',
- 'secret' : 'cisco',
+    'device_type': 'cisco_ios',
+    'ip': '192.168.10.10',
+    'username': 'admin',
+    'password': 'cisco',
+    'secret': 'cisco',
 }
 
 '''calling the ConnectHandler Library [**S1] means telling
