@@ -27,9 +27,8 @@ child.expect('S1#')
 # convert it to a string
 show_output = child.before.decode('utf-8')
 # print out the command 
-print(show_output) 
+print(show_output)
 child.sendline('exit')
 
-
-# Read the Pexpect docs at 
+# Read the Pexpect docs at
 # https://pexpect.readthedocs.io/en/stable/index.html

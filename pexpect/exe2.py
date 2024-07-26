@@ -15,5 +15,5 @@ child.expect('S1#')
 # convert it to a string
 show_output = child.before.decode('utf-8')
 # print out the command 
-print(show_output) 
+print(show_output)
 child.sendline('exit')
