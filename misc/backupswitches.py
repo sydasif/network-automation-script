@@ -9,8 +9,6 @@ dt_string = now.strftime("%d%m%Y_%H-%M-%S")
 username = "networkchuck"
 password = "Password123!"
 
-
-
 Switch1 = {
     "host": "192.168.243.146",
     "username": username,
@@ -52,7 +50,7 @@ for sw in switches:
     net_connect = Netmiko(**sw)
     show_version = net_connect.send_command("show version", use_textfsm=True)
     show_run = net_connect.send_command("show run")
-    hostname = showver[0]['hostname']
+    hostname = show_version[0]['hostname']
     backup_file = hostname + "_" + dt_string + ".txt"
     file = open(backup_file, "w")
     file.write(show_run)

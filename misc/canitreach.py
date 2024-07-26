@@ -5,8 +5,6 @@ from netmiko import Netmiko
 username = "networkchuck"
 password = "Password123!"
 
-
-
 access1 = {
     "host": "192.168.243.238",
     "username": username,
@@ -62,8 +60,8 @@ client = input("What is the IP address that your client can't reach? ")
 
 for x in devices:
     net_connect = Netmiko(**x)
-    showver = net_connect.send_command("show version", use_textfsm=True)
-    hostname = showver[0]['hostname']
+    show_ver = net_connect.send_command("show version", use_textfsm=True)
+    hostname = show_ver[0]['hostname']
     ping = net_connect.send_command("ping " + client)
     if "....." in ping:
         print(hostname + " can't connect.")
