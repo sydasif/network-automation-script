@@ -2,11 +2,11 @@ import json
 from napalm import get_network_driver
 
 devicelist = ['192.168.10.10',
-           '192.168.10.11'
-           ]
+              '192.168.10.11'
+              ]
 
 for ip_address in devicelist:
-    print ("Connecting to " + str(ip_address))
+    print("Connecting to " + str(ip_address))
     driver = get_network_driver('ios')
     iosv = driver(ip_address, 'admin', 'cisco')
     iosv.open()
@@ -28,8 +28,7 @@ for ip_address in devicelist:
         print(diffs)
         iosv.commit_config()
     else:
-    	print('No OSPF changes required.')
-    	iosv.discard_config()
+        print('No OSPF changes required.')
+        iosv.discard_config()
 
     iosv.close()
-

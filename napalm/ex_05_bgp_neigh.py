@@ -6,7 +6,6 @@ device = driver('192.168.122.72', 'david', 'cisco')
 device.open()
 
 output = device.get_bgp_neighbors()
-print (json.dumps(output, indent=4))
+print(json.dumps(output, indent=4))
 
 device.close()
-

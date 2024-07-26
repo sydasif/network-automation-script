@@ -12,6 +12,7 @@ load_dotenv()
 username = os.getenv("USER_ID")
 password = os.getenv("PASSWORD")
 
+
 def connect(ip, os_ver):
     for ip in cisco:
         driver = get_network_driver(os_ver)
@@ -19,9 +20,9 @@ def connect(ip, os_ver):
         device.open()
 
         print()
-        print (colored('GET OS VERSION......\n', 'red'))
+        print(colored('GET OS VERSION......\n', 'red'))
         os_version = device.get_facts()["os_version"]
-        
+
         if "vios_l2" in os_version:
             print(colored(f"{ip} os version is:\n\n" + os_version, 'magenta'))
         else:

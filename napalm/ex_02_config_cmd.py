@@ -10,4 +10,3 @@ print(device.compare_config())
 
 device.close()
 print('Done.')
-

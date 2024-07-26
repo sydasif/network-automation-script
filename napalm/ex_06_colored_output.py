@@ -19,6 +19,5 @@ for ip in device_ip:
 
     device.close()
     print()
-    print(colored('#'*50, "green"))
+    print(colored('#' * 50, "green"))
     print()
-
