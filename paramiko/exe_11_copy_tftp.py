@@ -6,11 +6,11 @@ password = 'cisco'
 
 tnow = datetime.datetime.now().replace(microsecond=0)
 
-list = open ('device')
+list = open('device')
 for sw in list:
     sw = sw.strip()
-    print ('\nConnecting to the device ------> ' + sw)
-    
+    print('\nConnecting to the device ------> ' + sw)
+
     connection = paramiko.SSHClient()
     connection.set_missing_host_key_policy(paramiko.AutoAddPolicy())
     connection.connect(sw, port=22,
@@ -23,8 +23,8 @@ for sw in list:
     time.sleep(5)
     output = remote_connection.recv(65000)
     time.sleep(3)
-    print ()
-    print ('Device backup is complete =======>> ' + sw + '\n')
-    print ('#' * 50)
-    print ()
+    print()
+    print('Device backup is complete =======>> ' + sw + '\n')
+    print('#' * 50)
+    print()
     connection.close()

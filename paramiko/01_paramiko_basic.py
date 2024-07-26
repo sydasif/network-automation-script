@@ -16,12 +16,12 @@ ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 # Connect to the remote device using the provided credentials
 ssh.connect(
     ip_addr,
-    port=22, 
-    username=username, 
-    password=password, 
-    look_for_keys=False, 
+    port=22,
+    username=username,
+    password=password,
+    look_for_keys=False,
     allow_agent=False
-    )
+)
 
 # Invoke an interactive shell session on the remote device
 device = ssh.invoke_shell()

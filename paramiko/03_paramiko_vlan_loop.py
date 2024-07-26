@@ -12,7 +12,7 @@ ssh_client = paramiko.SSHClient()
 # Set the policy to automatically add the host key
 ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 # Establish an SSH connection to the target device
-ssh_client.connect(hostname=ip_address, username=username, password=password, look_for_keys=False,  allow_agent=False)
+ssh_client.connect(hostname=ip_address, username=username, password=password, look_for_keys=False, allow_agent=False)
 
 print("Successful connection to", ip_address)
 # Invoke an interactive shell session on the remote device
