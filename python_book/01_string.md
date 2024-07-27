@@ -83,3 +83,58 @@ functions that will help you gain more understanding of your code. Here is our r
 1. Check your data type by using ``type()``.
 2. Check the available methods for your object by using ``dir()``.
 3. After knowing which method you want to use, learn how to use it by using ``help()``.
+
+### Using the ``upper()`` and ``lower()`` methods
+
+Using the ``upper()`` and ``lower()`` methods is helpful when you need to compare strings that do not need to be
+case-sensitive. For example, maybe you need to accept a variable that is the name of an interface such
+as ``Ethernet1/1``, but want to also allow the user to enter ``ethernet1/1``.
+
+````pycon
+>>> interface = 'Ethernet1/1'
+>>>
+>>> interface.lower()
+'ethernet1/1'
+>>>
+>>> interface.upper()
+'ETHERNET1/1'
+````
+
+After executing ``interface.lower()``, notice that ``ethernet1/1`` is printed to the terminal. This is telling you that
+``ethernet1/1`` was returned when ``lower()`` was executed. The same holds true for ``upper()``. When something is
+returned,
+you also have the ability to assign it as the value to a new or existing variable:
+
+````pycon
+>>> intf_lower = interface.lower()
+>>>
+>>> print(intf_lower)
+ethernet1/1
+````
+
+In this example, you can see how to use the method, but also assign the data being returned to a variable.
+
+### Using the ``startswith()`` and ``endswith()`` methods
+
+As you can probably guess, ``startswith()`` is used to verify whether a string starts with a certain sequence of
+characters, and ``endswith()`` is used to verify whether a string ends with a certain sequence of characters:
+
+````pycon
+>>> ipaddr = '10.100.20.5'
+>>>
+>>> ipaddr.startswith('10')
+True
+>>>
+>>> ipaddr.startswith('100')
+False
+>>>
+>>> ipaddr.endswith('.5')
+True
+````
+
+The ``lower()`` and ``upper()`` methods return a string, which is a modified string with all lowercase or uppercase
+letters. However, ``startswith()`` and ``endswith()`` do not return a string, but rather a boolean (``bool``) object.
+Boolean values are ``True`` and ``False``. The ``startswith()`` method returns ``True`` if the sequence of characters
+being passed in matches the respective starting or ending sequence of the object, otherwise, it returns ``False``.
+
+Using these methods proves to be valuable when you’re looking to verify the start or end of a string.
