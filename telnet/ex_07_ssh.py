@@ -1,6 +1,7 @@
 # Exercise 6: Configure SSH on all switches using python code
 import getpass
 import telnetlib
+
 user = input("Enter your username :")
 password = getpass.getpass()
 f = open("switch_ip.cfg")

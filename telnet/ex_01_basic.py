@@ -5,7 +5,7 @@ cmd = input('Enter the Command: ')  # Command
 ip = input("Enter IP Address: ")  # IP Address of device
 tn = Telnet(ip)
 
-tn.write(b'admin\n')  
+tn.write(b'admin\n')
 tn.write(b'cisco\n')
 tn.write(b'term length 0\n')
 tn.write(cmd.encode('ascii') + b'\n')

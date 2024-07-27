@@ -1,5 +1,5 @@
 ### ==========================================================================================
-                  ### Controlling the flow of a Python program ###
+### Controlling the flow of a Python program ###
 ### ==========================================================================================
 """
 The following list shows you all comparison operators, that are available to you:

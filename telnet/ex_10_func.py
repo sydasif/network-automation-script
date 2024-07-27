@@ -13,12 +13,13 @@ password = getpass.getpass()
 
 
 def send_cmd(command):
-    '''send commands from list'''
+    """send commands from list"""
     for cmd in command:
         tn.write(cmd.encode('ascii') + b"\n")
     result = tn.read_all().decode('ascii')
     return result
-    
+
+
 tn = telnetlib.Telnet(IP)
 tn.read_until(b"Username: ")
 tn.write(user.encode("ascii") + b"\n")

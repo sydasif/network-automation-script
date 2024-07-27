@@ -1,5 +1,5 @@
 ### =======================================
-    ## Looping over lists in Python ##
+## Looping over lists in Python ##
 ### =======================================
 
 # define the network part of our IP Add

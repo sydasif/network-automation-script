@@ -28,7 +28,7 @@ knows_python = False
 print(knows_python)
 
 # define a variable's create an empty list 
-l = [] 
+l = []
 
 # add variables to the end of this list using append() function
 l.append(my_hostname)

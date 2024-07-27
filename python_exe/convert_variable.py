@@ -15,4 +15,3 @@ age_as_text = str(age_as_num)
 print("Your age + 10 is " + age_as_text)
 # print using f-string syntax
 print(f"Your age + 10 is {age_as_text}")
-
