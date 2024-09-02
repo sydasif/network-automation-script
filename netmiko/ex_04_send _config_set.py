@@ -1,4 +1,5 @@
-'''SSH to multiple Cisco devices, using multiple device dictionaries in Netmiko and lists. It uses for loop to get each device dictionary'''
+"""SSH to multiple Cisco devices, using multiple device dictionaries in Netmiko and lists. It uses for loop to get
+each device dictionary"""
 
 from netmiko import ConnectHandler
 
