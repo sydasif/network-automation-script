@@ -1,4 +1,5 @@
 import json
+
 from napalm import get_network_driver
 # Add color to the output
 from termcolor import colored

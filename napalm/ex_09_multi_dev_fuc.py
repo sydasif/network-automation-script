@@ -1,12 +1,15 @@
-import napalm
 import json
+
+import napalm
 
 
 def main():
     driver_ios = napalm.get_network_driver("ios")
-    device_list = [["192.168.10.10", "ios", "switch"], ["192.168.10.11", "ios", "router"]]
+    device_list = [["192.168.10.10", "ios", "switch"],
+                   ["192.168.10.11", "ios", "router"]]
 
     network_devices = []
+
     for device in device_list:
         network_devices.append(
             driver_ios(

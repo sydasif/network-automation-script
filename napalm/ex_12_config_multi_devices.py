@@ -1,11 +1,10 @@
-import json
 from napalm import get_network_driver
 
-devicelist = ['192.168.10.10',
+device_list = ['192.168.10.10',
               '192.168.10.11'
               ]
 
-for ip_address in devicelist:
+for ip_address in device_list:
     print("Connecting to " + str(ip_address))
     driver = get_network_driver('ios')
     iosv = driver(ip_address, 'admin', 'cisco')

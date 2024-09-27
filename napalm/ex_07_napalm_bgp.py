@@ -1,10 +1,10 @@
 import json
+
 from napalm import get_network_driver
 
-bgplist = ['192.168.10.10',
-           '192.168.122.11'
-           ]
-for ip_address in bgplist:
+bgp_list = ['192.168.10.10', '192.168.122.11']
+
+for ip_address in bgp_list:
     print("Connecting to " + str(ip_address))
     driver = get_network_driver('ios')
     iosv_router = driver(ip_address, 'david', 'cisco')
