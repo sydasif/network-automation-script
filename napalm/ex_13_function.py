@@ -1,11 +1,11 @@
-from napalm import get_network_driver
-from termcolor import colored
-from getpass import getpass
-from dotenv import load_dotenv
 import os
 
-# Add different vendor list here 
-cisco = ['192.168.10.10', '192.168.10.11']
+from dotenv import load_dotenv
+from napalm import get_network_driver
+from termcolor import colored
+
+os_list = None  # Add different vendor list here
+ip_list = ['192.168.10.10', '192.168.10.11']
 
 load_dotenv()
 
@@ -13,8 +13,8 @@ username = os.getenv("USER_ID")
 password = os.getenv("PASSWORD")
 
 
-def connect(ip, os_ver):
-    for ip in cisco:
+def connect(os_ver):
+    for ip in ip_list:
         driver = get_network_driver(os_ver)
         device = driver(hostname=ip, username=username, password=password)
         device.open()
@@ -30,6 +30,7 @@ def connect(ip, os_ver):
 
 
 # calling function
-connect(cisco, "ios")
+connect("ios")
 
-# See details about python-dotenv: https://sydasif.github.io/python/python-dot-env/
+# See details about python-dotenv:
+# https://sydasif.github.io/python/python-dot-env/
