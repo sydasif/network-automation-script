@@ -1,7 +1,8 @@
 # Enable mode on devices
 
-from netmiko import ConnectHandler
 from getpass import getpass
+
+from netmiko import ConnectHandler
 
 password = getpass()
 secret = getpass("Enter secret: ")

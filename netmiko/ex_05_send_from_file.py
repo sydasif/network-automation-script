@@ -1,7 +1,8 @@
 # send configuration from config1.txt file 
 # !/usr/bin/env python
-from netmiko import ConnectHandler
 from getpass import getpass
+
+from netmiko import ConnectHandler
 
 S1 = {
     "device_type": "cisco_ios",

@@ -1,5 +1,6 @@
-import paramiko
 import time
+
+import paramiko
 
 # Create an instance of the SSHClient class from Paramiko
 connection = paramiko.SSHClient()

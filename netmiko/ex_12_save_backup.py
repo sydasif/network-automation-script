@@ -1,8 +1,9 @@
 # How to take Cisco IOS device configuration backup from the terminal 
 # using netmiko and save the file with timestamp
 
-from netmiko import ConnectHandler
 import datetime
+
+from netmiko import ConnectHandler
 
 now = datetime.datetime.now().replace(microsecond=0)
 # cr_date = '{:%d%m%Y_%H:%M:%S}'.format(now)

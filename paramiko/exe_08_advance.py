@@ -1,5 +1,6 @@
-import paramiko
 import time
+
+import paramiko
 
 host = '192.168.100.22'  # Remote device we want to interact with
 user = 'admin'  # SSH user
@@ -25,7 +26,8 @@ def issue_command(channel, command, delay=1):
 try:
     ssh = paramiko.SSHClient()
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    ssh.connect(hostname=host, username=user, password=password, look_for_keys=False, allow_agent=False)
+    ssh.connect(hostname=host, username=user, password=password,
+                look_for_keys=False, allow_agent=False)
     connection = ssh.invoke_shell()
 except:
     print("Login to {} failed".format(host))

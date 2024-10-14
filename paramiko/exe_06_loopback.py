@@ -1,5 +1,6 @@
-import paramiko
 import time
+
+import paramiko
 
 ip = '192.168.100.20'
 username = 'admin'
@@ -21,7 +22,8 @@ remote_connection.send(b'config t\n')
 
 for N in range(a, b):
     remote_connection.send('int lo ' + str(N) + '\n')
-    remote_connection.send('ip address 1.1.1.' + str(N) + ' 255.255.255.255' + '\n')
+    remote_connection.send(
+        'ip address 1.1.1.' + str(N) + ' 255.255.255.255' + '\n')
 
 time.sleep(3)
 remote_connection.send(b'do term length 0\n')

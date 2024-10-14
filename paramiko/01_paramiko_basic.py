@@ -1,6 +1,7 @@
-import paramiko
 import time
 from getpass import getpass
+
+import paramiko
 
 # Define the target device IP address
 ip_addr = '172.16.10.11'

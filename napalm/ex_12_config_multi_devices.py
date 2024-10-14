@@ -1,8 +1,8 @@
 from napalm import get_network_driver
 
 device_list = ['192.168.10.10',
-              '192.168.10.11'
-              ]
+               '192.168.10.11'
+               ]
 
 for ip_address in device_list:
     print("Connecting to " + str(ip_address))

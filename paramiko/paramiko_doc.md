@@ -2,17 +2,23 @@
 
 -----------------------------------------------
 
-The Paramiko module is the most widely used library for SSH in Python. It is written and developed in Python, though some core functions, like cryptography, depend on the C language.
+The Paramiko module is the most widely used library for SSH in Python. It is
+written and developed in Python, though some core functions, like cryptography,
+depend on the C language.
 
 ## Module Installation
 
-To install the latest Paramiko module from PyPI, open your Windows command prompt or Linux shell and execute the following command. This will also download additional dependency packages such as `cryptography`, `ipaddress`, and `six`:
+To install the latest Paramiko module from PyPI, open your Windows command
+prompt or Linux shell and execute the following command. This will also
+download additional dependency packages such as `cryptography`, `ipaddress`,
+and `six`:
 
 ```bash
 pip3 install paramiko
 ```
 
-You can verify the installation by entering the Python shell and importing the Paramiko module. Python should import it without any errors:
+You can verify the installation by entering the Python shell and importing the
+Paramiko module. Python should import it without any errors:
 
 ```bash
 (.venv) user@hostname:~/network-automation-script$ python3
@@ -24,7 +30,10 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 ## SSH to the Network Device
 
-First, import the Paramiko module into your Python script. Then, create an SSH client by inheriting from `SSHClient()`. Configure Paramiko to automatically add any unknown host keys and trust the connection between you and the server. Use the `connect` function and provide the remote host credentials:
+First, import the Paramiko module into your Python script. Then, create an SSH
+client by inheriting from `SSHClient()`. Configure Paramiko to automatically
+add any unknown host keys and trust the connection between you and the server.
+Use the `connect` function and provide the remote host credentials:
 
 ```python
 #!/usr/bin/python
@@ -44,16 +53,27 @@ ssh.connect(
 shell = ssh.invoke_shell()
 ```
 
-> `AutoAddPolicy()` is one of the policies that can be used inside the `set_missing_host_key_policy()` function. It's preferred and acceptable in a lab environment. However, use a more restrictive policy in a production environment, such as `WarningPolicy()` or `RejectPolicy()`.
+> `AutoAddPolicy()` is one of the policies that can be used inside
+> the `set_missing_host_key_policy()` function. It's preferred and acceptable in
+> a lab environment. However, use a more restrictive policy in a production
+> environment, such as `WarningPolicy()` or `RejectPolicy()`.
 
-The `invoke_shell()` function will start the interactive shell session towards your SSH server. You can provide additional parameters to it, such as the terminal type, width, and height.
+The `invoke_shell()` function will start the interactive shell session towards
+your SSH server. You can provide additional parameters to it, such as the
+terminal type, width, and height.
 
 **Paramiko Connect Parameters:**
 
-- `look_for_keys`: By default, this is `True`, which forces Paramiko to use key-pair authentication where the user uses both private and public keys to authenticate against the network device. In this case, it is set to `False` because password authentication is used.
-- `allow_agent`: This parameter allows connection to a local SSH agent OS. This is necessary when working with keys. Since authentication is performed using a login/password, it is disabled.
+- `look_for_keys`: By default, this is `True`, which forces Paramiko to use
+  key-pair authentication where the user uses both private and public keys to
+  authenticate against the network device. In this case, it is set to `False`
+  because password authentication is used.
+- `allow_agent`: This parameter allows connection to a local SSH agent OS. This
+  is necessary when working with keys. Since authentication is performed using
+  a login/password, it is disabled.
 
-The final step is to send a series of commands such as `show ip int bri` to the device terminal and get the output back to the Python shell:
+The final step is to send a series of commands such as `show ip int bri` to the
+device terminal and get the output back to the Python shell:
 
 ```python
 shell.send("terminal length 0\n")
@@ -99,4 +119,7 @@ Vlan1                  172.16.10.11    YES NVRAM  up                    up
 core1#
 ```
 
-> It is preferable to use `time.sleep()` when executing commands that will take a long time on a remote device. This forces Python to wait until the device generates output and sends it back to Python. Otherwise, Python may return blank output to the user.
+> It is preferable to use `time.sleep()` when executing commands that will take
+> a long time on a remote device. This forces Python to wait until the device
+> generates output and sends it back to Python. Otherwise, Python may return
+> blank output to the user.

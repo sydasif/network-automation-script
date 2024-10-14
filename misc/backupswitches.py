@@ -1,6 +1,7 @@
 #!/usr/bin/env python
-from netmiko import Netmiko
 from datetime import datetime
+
+from netmiko import Netmiko
 
 now = datetime.now()
 

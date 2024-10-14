@@ -1,8 +1,9 @@
 # Telnet to Device
 import pexpect
 
-devices = {'CoreSW': {'prompt': 'CoreSW#', 'ip': '192.168.100.20', 'en': 'CoreSW>'},
-           'SW1': {'prompt': 'SW1#', 'ip': '192.168.100.21', 'en': 'SW1>'}}
+devices = {
+    'CoreSW': {'prompt': 'CoreSW#', 'ip': '192.168.100.20', 'en': 'CoreSW>'},
+    'SW1': {'prompt': 'SW1#', 'ip': '192.168.100.21', 'en': 'SW1>'}}
 username = 'admin'
 password = 'cisco'
 

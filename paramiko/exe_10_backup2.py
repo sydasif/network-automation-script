@@ -1,6 +1,7 @@
-import paramiko
-import time
 import datetime
+import time
+
+import paramiko
 
 username = 'admin'
 password = 'cisco'

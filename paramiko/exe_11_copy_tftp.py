@@ -1,5 +1,7 @@
+import datetime
+import time
+
 import paramiko
-import datetime, time
 
 username = 'admin'
 password = 'cisco'
@@ -19,7 +21,8 @@ for sw in list:
                        look_for_keys=False,
                        allow_agent=False)
     remote_connection = connection.invoke_shell()
-    remote_connection.send('copy running-config tftp://192.168.100.100' + '\n\n\n')
+    remote_connection.send(
+        'copy running-config tftp://192.168.100.100' + '\n\n\n')
     time.sleep(5)
     output = remote_connection.recv(65000)
     time.sleep(3)

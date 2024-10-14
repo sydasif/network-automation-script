@@ -1,7 +1,7 @@
 from netmiko import ConnectHandler
+from netmiko.ssh_exception import AuthenticationException
 from netmiko.ssh_exception import NetMikoTimeoutException
 from paramiko.ssh_exception import SSHException
-from netmiko.ssh_exception import AuthenticationException
 
 IP_LIST = open('devices_list')
 for IP in IP_LIST:

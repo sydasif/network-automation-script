@@ -1,5 +1,6 @@
-import paramiko
 import time
+
+import paramiko
 
 # Create an instance of the SSHClient class from Paramiko
 connection = paramiko.SSHClient()
@@ -7,7 +8,8 @@ connection = paramiko.SSHClient()
 connection.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
 # Establish an SSH connection to the target device
-connection.connect('172.16.10.12', username='admin', password='cisco', look_for_keys=False, allow_agent=False)
+connection.connect('172.16.10.12', username='admin', password='cisco',
+                   look_for_keys=False, allow_agent=False)
 
 # Invoke an interactive shell session on the remote device
 new_connection = connection.invoke_shell()

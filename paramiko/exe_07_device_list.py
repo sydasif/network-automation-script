@@ -1,5 +1,6 @@
-import paramiko
 import time
+
+import paramiko
 
 username = 'admin'
 password = 'cisco'
@@ -21,7 +22,8 @@ for sw in list:
 
     for N in range(2, 5):
         remote_connection.send('int lo ' + str(N) + '\n')
-        remote_connection.send('ip address 1.1.1.' + str(N) + ' 255.255.255.255\n')
+        remote_connection.send(
+            'ip address 1.1.1.' + str(N) + ' 255.255.255.255\n')
 
     time.sleep(5)
     remote_connection.send(b'end\n')

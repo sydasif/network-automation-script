@@ -1,5 +1,6 @@
-import pexpect
 import sys
+
+import pexpect
 
 child = pexpect.spawn('telnet 192.168.100.20')
 child.expect('Username: ')

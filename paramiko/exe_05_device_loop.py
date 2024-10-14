@@ -1,6 +1,7 @@
 # Using for loop to configure device
-import paramiko
 import time
+
+import paramiko
 
 username = 'admin'
 password = 'cisco'
@@ -22,7 +23,8 @@ for sw in range(20, 23):
 
     for N in range(2, 5):
         remote_connection.send('int lo ' + str(N) + '\n')
-        remote_connection.send('ip address 1.1.1.' + str(N) + ' 255.255.255.255\n')
+        remote_connection.send(
+            'ip address 1.1.1.' + str(N) + ' 255.255.255.255\n')
 
     time.sleep(5)
     remote_connection.send(b'do term length 0\n')

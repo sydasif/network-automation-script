@@ -1,6 +1,7 @@
 # Exercise 1: Create VLANs and Assign IP using SSH
-from netmiko import ConnectHandler
 from getpass import getpass
+
+from netmiko import ConnectHandler
 
 # user input
 password = getpass()
