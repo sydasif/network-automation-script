@@ -4,11 +4,11 @@ import telnetlib
 
 user = input("Enter your username :")
 password = getpass.getpass()
-f = open("switches.txt")
+f = open("device_ip.cfg")
 for IP in f:
     # IP.strip() is used to remove any white-spaces 
     IP = IP.strip()
-    print("Taking backup of Switch " + (IP))
+    print("Taking backup of Switch " + IP)
     tn = telnetlib.Telnet(IP)
     tn.read_until(b"Username: ")
     tn.write(user.encode("ascii") + b"\n")

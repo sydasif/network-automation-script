@@ -15,12 +15,12 @@ user = input("Enter your username :")
 password = getpass.getpass()
 
 #  Open the file 
-f = open("switches.txt")
+f = open("device_ip.cfg")
 
 # For loop will get the IP from the file one by one and execute the code
 for IP in f:
     IP = IP.strip()
-    print("Configuring Switch " + (IP))
+    print("Configuring Switch " + IP)
     tn = telnetlib.Telnet(IP)
     tn.read_until(b"Username: ")
     tn.write(user.encode("ascii") + b"\n")
