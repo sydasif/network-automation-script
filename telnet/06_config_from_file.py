@@ -1,4 +1,4 @@
-# Exercise 5: Create multiple VLANs on multiple switches 
+# Exercise 5: Create multiple VLANs on multiple switches
 
 """ For this exercise, first we need to create a file containing the
 IP addresses of all the switches.Later in the program, we will call this file
@@ -14,8 +14,8 @@ import telnetlib
 user = input("Enter your username :")
 password = getpass.getpass()
 
-#  Open the file 
-f = open("device_ip.cfg")
+#  Open the file
+f = open("switch.cfg")
 
 # For loop will get the IP from the file one by one and execute the code
 for IP in f:
