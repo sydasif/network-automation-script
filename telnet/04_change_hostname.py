@@ -14,16 +14,16 @@ password = getpass.getpass()
 # Pass the IP variable value in to the telnetlib
 tn = telnetlib.Telnet(IP)
 
-# Now the code will read each output from the cisco switch 
+# Now the code will read each output from the cisco switch
 tn.read_until(b"Username: ")
 tn.write(user.encode("ascii") + b"\n")
 if password:
     tn.read_until(b"Password: ")
     tn.write(password.encode("ascii") + b"\n")
 
-''' Now specify the commands in the right sequence.enable password,
+""" Now specify the commands in the right sequence.enable password,
 then change to configuration terminal and change the hostname, 
-finally save the configuration and exit '''
+finally save the configuration and exit """
 
 tn.write(b"enable\n")
 tn.write(b"cisco\n")
@@ -33,4 +33,4 @@ tn.write(b"end\n")
 tn.write(b"write memory\n")
 tn.write(b"exit\n")
 
-print(tn.read_all().decode('ascii'))
+print(tn.read_all().decode("ascii"))

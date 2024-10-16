@@ -1,13 +1,10 @@
-# Python telnetlib  
+# Python telnetlib
 import getpass
 import telnetlib
 
-commands = ["terminal length 0",
-            "sh ip int bri",
-            "exit"
-            ]
+commands = ["terminal length 0", "sh ip int bri", "exit"]
 
-IP = '192.168.10.10'
+IP = "172.16.141.11"
 user = input("Enter your username :")
 password = getpass.getpass()
 
@@ -15,8 +12,8 @@ password = getpass.getpass()
 def send_cmd(command):
     """send commands from list"""
     for cmd in command:
-        tn.write(cmd.encode('ascii') + b"\n")
-    result = tn.read_all().decode('ascii')
+        tn.write(cmd.encode("ascii") + b"\n")
+    result = tn.read_all().decode("ascii")
     return result
 
 
