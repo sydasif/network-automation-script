@@ -1,60 +1,43 @@
 #!/usr/bin/env python
 from datetime import datetime
-
 from netmiko import Netmiko
 
+# Get current date and time for timestamping the backup
 now = datetime.now()
-
 dt_string = now.strftime("%d%m%Y_%H-%M-%S")
 
-username = "networkchuck"
-password = "Password123!"
+username = "admin"
+password = "cisco"
 
-Switch1 = {
-    "host": "192.168.243.146",
+SW1 = {
+    "host": "172.16.141.11",
     "username": username,
     "password": password,
     "device_type": "cisco_ios",
 }
 
-Switch2 = {
-    "host": "192.168.243.149",
+R1 = {
+    "host": "172.16.141.12",
     "username": username,
     "password": password,
     "device_type": "cisco_ios",
 }
 
-Switch3 = {
-    "host": "192.168.243.150",
-    "username": username,
-    "password": password,
-    "device_type": "cisco_ios",
-}
+# List of devices to back up
+devices = [SW1, R1]
 
-Switch4 = {
-    "host": "192.168.243.148",
-    "username": username,
-    "password": password,
-    "device_type": "cisco_ios",
-}
-
-Switch5 = {
-    "host": "192.168.243.147",
-    "username": username,
-    "password": password,
-    "device_type": "cisco_ios",
-}
-
-switches = [Switch1, Switch2, Switch3, Switch4, Switch5]
-
-for sw in switches:
-    net_connect = Netmiko(**sw)
+for device in devices:
+    net_connect = Netmiko(**device)
     show_version = net_connect.send_command("show version", use_textfsm=True)
+    hostname = show_version[0]["hostname"]
+    print(hostname + " ........ Connected.")
     show_run = net_connect.send_command("show run")
-    hostname = show_version[0]['hostname']
-    backup_file = hostname + "_" + dt_string + ".txt"
+    # Create a backup file with the hostname and timestamp
+    backup_file = hostname + "_" + dt_string + ".ios"
     file = open(backup_file, "w")
     file.write(show_run)
     file.close()
-    print(hostname + " has been backed up" + "\n")
+    print(hostname + " has been backed up." + "\n")
+
+    # Disconnect from the device
     net_connect.disconnect()
