@@ -9,22 +9,36 @@ dt_string = now.strftime("%d%m%Y_%H-%M-%S")
 username = "admin"
 password = "cisco"
 
-SW1 = {
-    "host": "172.16.141.11",
+SW_RTR = {
+    "host": "192.168.99.1",
+    "username": username,
+    "password": password,
+    "device_type": "cisco_ios",
+}
+
+SW2 = {
+    "host": "192.168.99.2",
+    "username": username,
+    "password": password,
+    "device_type": "cisco_ios",
+}
+
+SW3 = {
+    "host": "192.168.99.3",
     "username": username,
     "password": password,
     "device_type": "cisco_ios",
 }
 
 R1 = {
-    "host": "172.16.141.12",
+    "host": "192.168.100.2",
     "username": username,
     "password": password,
     "device_type": "cisco_ios",
 }
 
 # List of devices to back up
-devices = [SW1, R1]
+devices = [SW2, R1, SW3, SW_RTR]
 
 for device in devices:
     net_connect = Netmiko(**device)
