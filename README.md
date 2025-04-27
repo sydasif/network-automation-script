@@ -28,6 +28,6 @@ future of administering the network and systems.
 - **Lisa Tagliaferri** [*How to Code in
   Python*](https://www.digitalocean.com/community/books/digitalocean-ebook-how-to-code-in-python)
 
-## [Python data type](python_book/python_data_types.md)
-
-1. **[String](python_book/01_string.md)**
+- [Telnet Scripts for Network Engineers](docs/telnet.md)
+- [Automating Network Device Interaction with Pexpect](docs/pexpect.md)
+- [Paramiko Module](docs/paramiko.md)
