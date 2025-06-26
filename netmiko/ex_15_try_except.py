@@ -1,29 +1,29 @@
-from netmiko import ConnectHandler
-from netmiko.ssh_exception import AuthenticationException
-from netmiko.ssh_exception import NetMikoTimeoutException
+from netmiko.ssh_exception import AuthenticationException, NetMikoTimeoutException
 from paramiko.ssh_exception import SSHException
 
-IP_LIST = open('devices_list')
+from netmiko import ConnectHandler
+
+IP_LIST = open("devices_list")
 for IP in IP_LIST:
-    print('\n' + IP.strip() + '  \n')
+    print("\n" + IP.strip() + "  \n")
     device = {
-        'ip': IP,
-        'username': 'admin',
-        'password': 'cisco',
-        'device_type': 'cisco_ios',
+        "ip": IP,
+        "username": "admin",
+        "password": "cisco",
+        "device_type": "cisco_ios",
     }
-    print('Connecting to device' + IP)
+    print("Connecting to device" + IP)
     try:
         net_connect = ConnectHandler(**device)
     except NetMikoTimeoutException:
-        print('Device not reachable.')
+        print("Device not reachable.")
         continue
     except AuthenticationException:
-        print('Authentication Failure.')
+        print("Authentication Failure.")
         continue
     except SSHException:
-        print('Make sure SSH is enabled in device.')
+        print("Make sure SSH is enabled in device.")
         continue
 
-    output = net_connect.send_config_from_file(config_file='config_file')
+    output = net_connect.send_config_from_file(config_file="config_file")
     print(output)

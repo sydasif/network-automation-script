@@ -1,11 +1,12 @@
 import os
 
 from dotenv import load_dotenv
-from napalm import get_network_driver
 from termcolor import colored
 
+from napalm import get_network_driver
+
 os_list = None  # Add different vendor list here
-ip_list = ['192.168.10.10', '192.168.10.11']
+ip_list = ["192.168.10.10", "192.168.10.11"]
 
 load_dotenv()
 
@@ -20,17 +21,15 @@ def connect(os_ver):
         device.open()
 
         print()
-        print(colored('GET OS VERSION......\n', 'red'))
+        print(colored("GET OS VERSION......\n", "red"))
         os_version = device.get_facts()["os_version"]
 
         if "vios_l2" in os_version:
-            print(colored(f"{ip} os version is:\n\n" + os_version, 'magenta'))
+            print(colored(f"{ip} os version is:\n\n" + os_version, "magenta"))
         else:
-            print(colored(f"{ip} os version is:\n\n" + os_version, 'blue'))
+            print(colored(f"{ip} os version is:\n\n" + os_version, "blue"))
 
 
-# calling function
 connect("ios")
 
-# See details about python-dotenv:
-# https://sydasif.github.io/python/python-dot-env/
+# See details about python-dotenv: https://sydasif.github.io/python/python-dot-env/

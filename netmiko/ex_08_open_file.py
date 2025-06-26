@@ -2,30 +2,31 @@
 from netmiko import ConnectHandler
 
 CoreSW = {
-    'device_type': 'cisco_ios',
-    'ip': '192.168.100.20',
-    'username': 'admin',
-    'password': 'cisco',
-    'secret': 'cisco'
+    "device_type": "cisco_ios",
+    "ip": "192.168.100.20",
+    "username": "admin",
+    "password": "cisco",
+    "secret": "cisco",
 }
 SW1 = {
-    'device_type': 'cisco_ios',
-    'ip': '192.168.100.21',
-    'username': 'admin',
-    'password': 'cisco',
-    'secret': 'cisco'
+    "device_type": "cisco_ios",
+    "ip": "192.168.100.21",
+    "username": "admin",
+    "password": "cisco",
+    "secret": "cisco",
 }
 SW2 = {
-    'device_type': 'cisco_ios',
-    'ip': '192.168.100.22',
-    'username': 'admin',
-    'password': 'cisco',
-    'secret': 'cisco'
+    "device_type": "cisco_ios",
+    "ip": "192.168.100.22",
+    "username": "admin",
+    "password": "cisco",
+    "secret": "cisco",
 }
 devices = [CoreSW, SW1, SW2]
 
-# Open the config_change.txt file that has all the commands that we need to execute and read lines
-with open('config_file1.cfg') as f:
+# Open the config_change.txt file that has all the commands that we need to execute and
+# read lines
+with open("config_file1.cfg") as f:
     lines = f.read().splitlines()
 print(lines)
 

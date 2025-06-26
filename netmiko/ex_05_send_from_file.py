@@ -1,4 +1,4 @@
-# send configuration from config1.txt file 
+# send configuration from config1.txt file
 # !/usr/bin/env python
 from getpass import getpass
 
