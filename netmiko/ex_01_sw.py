@@ -4,9 +4,9 @@ from netmiko import ConnectHandler
 # Create a dictionary for a particular device
 S1 = {
     "device_type": "cisco_ios",
-    "ip": "192.168.10.10",
+    "ip": "192.168.121.102",
     "username": "admin",
-    "password": "cisco",
+    "password": "admin",
     "secret": "cisco",
 }
 

@@ -1,0 +1,97 @@
+{
+  "name": "lab",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "netlab_mgmt",
+        "bridge": "br-5b5983215194",
+        "ipv4-subnet": "192.168.121.0/24",
+        "ipv4-gw": "192.168.121.1",
+        "external-access": true
+      }
+    }
+  },
+  "ssh-pub-keys": ["ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ7TtVdOKs0x5qXqhxA6Es1qTdowJ0bddsgJ73+xhxVt"],
+  "nodes": {
+    "R1": {
+      "index": "0",
+      "shortname": "R1",
+      "longname": "clab-lab-R1",
+      "fqdn": "R1.lab.io",
+      "group": "",
+      "labdir": "/home/zulu/Documents/network-automation-script/netlab/clab-lab/R1",
+      "kind": "cisco_iol",
+      "image": "asifsyd/cisco_iol:17.12.01",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "192.168.121.101",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-5b5983215194",
+        "clab-node-group": "",
+        "clab-node-kind": "cisco_iol",
+        "clab-node-lab-dir": "/home/zulu/Documents/network-automation-script/netlab/clab-lab/R1",
+        "clab-node-longname": "clab-lab-R1",
+        "clab-node-name": "R1",
+        "clab-node-type": "",
+        "clab-owner": "zulu",
+        "clab-topo-file": "/home/zulu/Documents/network-automation-script/netlab/clab.yml",
+        "containerlab": "lab"
+      },
+      "port-bindings": [
+      ]
+    },
+    "S1": {
+      "index": "1",
+      "shortname": "S1",
+      "longname": "clab-lab-S1",
+      "fqdn": "S1.lab.io",
+      "group": "",
+      "labdir": "/home/zulu/Documents/network-automation-script/netlab/clab-lab/S1",
+      "kind": "cisco_iol",
+      "image": "asifsyd/cisco_iol:l2-17.12.01",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "192.168.121.102",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-5b5983215194",
+        "clab-node-group": "",
+        "clab-node-kind": "cisco_iol",
+        "clab-node-lab-dir": "/home/zulu/Documents/network-automation-script/netlab/clab-lab/S1",
+        "clab-node-longname": "clab-lab-S1",
+        "clab-node-name": "S1",
+        "clab-node-type": "l2",
+        "clab-owner": "zulu",
+        "clab-topo-file": "/home/zulu/Documents/network-automation-script/netlab/clab.yml",
+        "containerlab": "lab"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "a": {
+        "node": "R1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:ca:98:65",
+        "peer": "z"
+      },
+      "z": {
+        "node": "S1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:d8:82:9a",
+        "peer": "a"
+      }
+    }
+  ]
+}

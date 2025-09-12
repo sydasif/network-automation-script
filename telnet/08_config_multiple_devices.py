@@ -7,13 +7,13 @@ user = input("Welcome, if authorized \nPlease enter your telnet Username: ")
 password = getpass.getpass()
 
 """ Create a for loop to configure multiple devices,
-also note that we are converting the value on 'IP' 
-to string value using str() command. 
+also note that we are converting the value on 'IP'
+to string value using str() command.
 1st digit is included & last digit will exclude """
 
-for IP in range(20, 23):
-    HOST = "192.168.100." + str(IP)
-    print("configuration of 192.168.100." + str(IP))
+for IP in range(101, 102):
+    HOST = "192.168.121." + str(IP)
+    print("configuration of 192.168.121." + str(IP))
     tn = telnetlib.Telnet(HOST)
     tn.read_until(b"Username: ")
     tn.write(user.encode("ascii") + b"\n")

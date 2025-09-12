@@ -1,6 +1,6 @@
 # Exercise 5: Create multiple VLANs on multiple switches
 
-""" For this exercise, first we need to create a file containing the
+"""For this exercise, first we need to create a file containing the
 IP addresses of all the switches.Later in the program, we will call this file
 and the code will check IP one by one and perform the operation.
 Create a file named as switches.txt. Write all the three IP address of the
@@ -15,7 +15,7 @@ user = input("Enter your username :")
 password = getpass.getpass()
 
 #  Open the file
-f = open("switch.cfg")
+f = open("telnet/switch.cfg")
 
 # For loop will get the IP from the file one by one and execute the code
 for IP in f:

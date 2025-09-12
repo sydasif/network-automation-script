@@ -1,0 +1,26 @@
+name: lab
+prefix: "clab"
+
+mgmt:
+  network: netlab_mgmt
+  ipv4-subnet: 192.168.121.0/24
+  # Note: 'start' not validated
+topology:
+  nodes:
+    R1:
+      mgmt-ipv4: 192.168.121.101
+      kind: cisco_iol
+      image: asifsyd/cisco_iol:17.12.01
+      runtime: docker
+    S1:
+      mgmt-ipv4: 192.168.121.102
+      kind: cisco_iol
+      type: 'l2'
+      image: asifsyd/cisco_iol:l2-17.12.01
+      runtime: docker
+
+
+  links:
+  - endpoints:
+    - "R1:Ethernet0/1"
+    - "S1:Ethernet0/1"

@@ -1,4 +1,5 @@
 import sys
+
 import pexpect
 
 # Start Telnet session to the device

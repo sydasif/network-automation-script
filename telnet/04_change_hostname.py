@@ -3,7 +3,7 @@ import getpass
 import telnetlib
 
 # Declare a variable for storing the IP address
-IP = "192.168.100.20"
+IP = "192.168.121.101"
 
 # Declare a variable for storing username
 user = input("Enter your username :")
@@ -22,11 +22,11 @@ if password:
     tn.write(password.encode("ascii") + b"\n")
 
 """ Now specify the commands in the right sequence.enable password,
-then change to configuration terminal and change the hostname, 
+then change to configuration terminal and change the hostname,
 finally save the configuration and exit """
 
-tn.write(b"enable\n")
-tn.write(b"cisco\n")
+# tn.write(b"enable\n")
+# tn.write(b"cisco\n")
 tn.write(b"conf t\n")
 tn.write(b"hostname CoreSW\n")
 tn.write(b"end\n")

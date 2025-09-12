@@ -1,0 +1,36 @@
+# Ansible inventory created from ['/home/zulu/Documents/network-automation-script/netlab/topology.yml', 'package:topology-defaults.yml']
+#
+
+%YAML 1.1
+---
+interfaces:
+- ipv4: 10.1.0.1/30
+  linkindex: 1
+  type: p2p
+  name: R1 -> S1
+  ifindex: 1
+  ifname: Ethernet0/1
+  clab:
+    name: Ethernet0/1
+  neighbors:
+  - ipv4: 10.1.0.2/30
+    ifname: Ethernet0/1
+    node: S1
+clab:
+  kind: cisco_iol
+box: asifsyd/cisco_iol:17.12.01
+role: router
+af:
+  ipv4: true
+mgmt:
+  ifname: Ethernet0/0
+  mac: 08:4f:a9:01:00:00
+  ipv4: 192.168.121.101
+hostname: clab-lab-R1
+loopback:
+  type: loopback
+  neighbors: []
+  virtual_interface: true
+  ifindex: 0
+  ifname: Loopback0
+  ipv4: 10.0.0.1/32
