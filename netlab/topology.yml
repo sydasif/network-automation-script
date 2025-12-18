@@ -1,17 +1,20 @@
 ---
 name: lab
-provider: clab
 
-defaults:
-  devices:
-    iol.clab.image: asifsyd/cisco_iol:17.12.01
-    ioll2.clab.image: asifsyd/cisco_iol:l2-17.12.01
+mgmt:
+  ipv4-subnet: 172.40.40.0/24
+  ipv6-subnet: 3fff:172:40:40::/64
 
-nodes:
-  R1:
-    device: iol
-  S1:
-    device: ioll2
+topology:
+  kinds:
+    cisco_iol:
+      image: asifsyd/cisco_iol:17.12.01
 
-links:
-  - R1-S1
+  nodes:
+    R1:
+      kind: cisco_iol
+    S1:
+      kind: cisco_iol
+
+  links:
+    - endpoints: ["R1:eth1", "S1:eth1"]

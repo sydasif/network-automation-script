@@ -1,0 +1,5 @@
+# Ignore everything in the netlab directory
+netlab/*
+
+# But don't ignore the topology.yml file specifically
+!netlab/topology.yml
