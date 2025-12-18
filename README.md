@@ -13,12 +13,6 @@ programming languages is vital for the future of administering the network and s
 
 ⚠️ **Important**: The scripts in the individual directories (telnet/, paramiko/, netmiko/, etc.) contain hardcoded credentials and use insecure protocols like telnet. These are for educational purposes only.
 
-For production use, please refer to our **secure refactored scripts** in the main directory:
-
-- See `SECURE_README.md` for the new secure approach
-- Use `config_manager.py` and `network_utils.py` for secure operations
-- Follow security best practices with environment variables
-
 ### Python for Network Engineer
 
 #### Free Ebooks
@@ -31,9 +25,3 @@ For production use, please refer to our **secure refactored scripts** in the mai
 - [Telnet Scripts for Network Engineers](docs/telnet.md) (Educational only)
 - [Automating Network Device Interaction with Pexpect](docs/pexpect.md)
 - [Paramiko Module](docs/paramiko.md)
-
-#### Secure Network Automation
-
-- [Secure Network Automation Guide](SECURE_README.md) (Recommended for production)
-- [Configuration Management](config_manager.py)
-- [Network Utilities](network_utils.py)
